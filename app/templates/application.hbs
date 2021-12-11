@@ -1,7 +1,7 @@
-{{page-title "MyApp"}}
+<h1>{{@model.title}}</h1>
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<ul>
+  {{#each @model.comments as |comment|}}
+    <li>{{comment.body}}</li>
+  {{/each}}
+</ul>
